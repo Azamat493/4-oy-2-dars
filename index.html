@@ -1,11 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fox Photo</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Segoe+Script&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a2b2c12345.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="max-w-[1400px] mx-auto bg-white">
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Foxphoto</title>
+        <link rel="stylesheet" href="./input.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link
+          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+          rel="stylesheet"
+        />
+        <style>
+          html,
+          body {
+            overflow-x: hidden;
+          }
+        </style>
+      </head>
+      <body class="font-[var(--font-family-main)] bg-white text-black">
+        <header
+          class="w-full py-[20px] border-b bg-white border-[#ddd] sticky top-0 z-[999]"
+        >
+          <div
+            class="max-w-[1400px] mx-auto w-[90%] flex items-center justify-between"
+          >
+            <div class="flex items-center gap-2">
+              <a href="./index.html">
+                <img src="./images/logo.png" alt="Foxphoto Logo" class="" />
+              </a>
+            </div>
+            <nav
+              class="hidden lg:flex md:text-[18px] items-center gap-[30px] text-[18px]"
+            >
+              <a
+                href="#"
+                class="hover:text-[var(--color-social-hovered)] transition-all duration-300"
+                >Главная</a
+              >
+              <a
+                href="#"
+                class="hover:text-[var(--color-social-hovered)] transition-all duration-300"
+                >Виды печати</a
+              >
+              <a
+                href="#"
+                class="hover:text-[var(--color-social-hovered)] transition-all duration-300"
+                >Наши работы</a
+              >
+              <a
+                href="#"
+                class="hover:text-[var(--color-social-hovered)] transition-all duration-300"
+                >Контакты</a
+              >
+            </nav>
+            <a
+              href="#"
+              class="hidden md:inline-block px-[25px] py-[10px] rounded-[8px] bg-[var(--color-blue)] text-white font-semibold hover:bg-[var(--color-social-hovered)] transition-all duration-300"
+            >
+              Начать
+            </a>
+            <input type="checkbox" id="menu-toggle" class="hidden peer" />
+            <label
+              for="menu-toggle"
+              class="lg:hidden text-[28px] cursor-pointer"
+            >
+              <i class="fas fa-bars text-[var(--color-blue)]"></i>
+            </label>
+
+            <div
+              class="fixed inset-0 bg-black/40 hidden peer-checked:flex justify-end transition-all duration-300"
+            >
+              <div
+                class="bg-white w-[70%] sm:w-[50%] h-full p-8 flex flex-col gap-8 relative"
+              >
+                <label
+                  for="menu-toggle"
+                  class="absolute top-6 right-6 text-[30px] cursor-pointer text-[var(--color-form-red)]"
+                >
+                  <i class="fas fa-xmark text-[var(--color-blue)]"></i>
+                </label>
+
+                <nav
+                  class="mt-[60px] flex flex-col gap-6 text-[20px] font-semibold"
+                >
+                  <a
+                    href="#"
+                    class="hover:text-[var(--color-social-hovered)] transition-all duration-300"
+                    >Главная</a
+                  >
+                  <a
+                    href="#"
+                    class="hover:text-[var(--color-social-hovered)] transition-all duration-300"
+                    >Виды печати</a
+                  >
+                  <a
+                    href="#"
+                    class="hover:text-[var(--color-social-hovered)] transition-all duration-300"
+                    >Наши работы</a
+                  >
+                  <a
+                    href="#"
+                    class="hover:text-[var(--color-social-hovered)] transition-all duration-300"
+                    >Контакты</a
+                  >
+
+                  <a
+                    href="#"
+                    class="px-[25px] block md:hidden py-[10px] rounded-[8px] bg-[var(--color-blue)] text-white font-semibold hover:bg-[var(--color-social-hovered)] transition-all duration-300 w-max"
+                  >
+                    Начать
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main>
+          <section class="bg-white">
+            <div
+              class="max-w-[1400px] mx-auto w-full bg-[url('/images/bg.png')] bg-no-repeat bg-center bg-cover flex flex-col md:flex-row items-center justify-between gap-10 p-[24px]"
+            >
+              <div class="text-center md:text-left md:w-1/2">
+                <h1
+                  data-aos="fade-up"
+                  class="text-4xl md:text-5xl font-extrabold text-[#fff] font-family-main leading-tight mb-6"
+                >
+                  Печатаем картинки<br />для подарков с душой
+                </h1>
+                <p
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  class="text-base md:text-lg text-[#fff] font-[var(--font-family-main)] mb-8"
+                >
+                  Уникальные фото, изображения и принты на любой поверхности —
+                  от кружек до футболок.
+                </p>
+                <a
+                  href="#contact"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  class="inline-block bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold py-3 px-8 rounded-full transition-all duration-300"
+                >
+                  Заказать печать
+                </a>
+              </div>
+              <div class="md:w-1/2 flex justify-center">
+                <img
+                  src="./images/left.png"
+                  alt="Подарки с душой"
+                  class="max-w-full h-auto rounded-[20px] shadow-lg"
+                />
+              </div>
+            </div>
+          </section>
+          <section class="bg-white py-[80px]">
+            <div class="max-w-[1400px] mx-auto w-[90%] text-center">
+              <h2
+                class="text-[42px] font-bold text-[#000] mb-[50px] font-family-main"
+              >
+                На чем мы печатаем
+              </h2>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="100"
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]"
+              >
+                <div
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                  class="flex flex-col items-center justify-center p-[20px] border border-gray-200 rounded-[15px] shadow-md hover:shadow-lg transition-all duration-300"
+                >
+                  <img
+                    src="./images/Прототип.png"
+                    alt="Футболки"
+                    class="w-[120px] h-[120px] object-contain mb-[15px]"
+                  />
+                  <h3
+                    class="text-[20px] font-semibold text-[#000] font-family-main"
+                  >
+                    Футболки
+                  </h3>
+                </div>
+                <div
+                  data-aos="zoom-in"
+                  data-aos-delay="100"
+                  class="flex flex-col items-center justify-center p-[20px] border border-gray-200 rounded-[15px] shadow-md hover:shadow-lg transition-all duration-300"
+                >
+                  <img
+                    src="./images/t_cup.png"
+                    alt="Кружки"
+                    class="w-[120px] h-[120px] object-contain mb-[15px]"
+                  />
+                  <h3
+                    class="text-[20px] font-semibold text-[#000] font-family-main"
+                  >
+                    Кружки
+                  </h3>
+                </div>
+                <div
+                  data-aos="zoom-in"
+                  data-aos-delay="200"
+                  class="flex flex-col items-center justify-center p-[20px] border border-gray-200 rounded-[15px] shadow-md hover:shadow-lg transition-all duration-300"
+                >
+                  <img
+                    src="./images/t_accs.png"
+                    alt="Подушки"
+                    class="w-[120px] h-[120px] object-contain mb-[15px]"
+                  />
+                  <h3
+                    class="text-[20px] font-semibold text-[#000] font-family-main"
+                  >
+                    Рюкзаки
+                  </h3>
+                </div>
+                <div
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
+                  class="flex flex-col items-center justify-center p-[20px] border border-gray-200 rounded-[15px] shadow-md hover:shadow-lg transition-all duration-300"
+                >
+                  <img
+                    src="./images/t_home.png"
+                    alt="Кепки"
+                    class="w-[120px] h-[120px] object-contain mb-[15px]"
+                  />
+                  <h3
+                    class="text-[20px] font-semibold text-[#000] font-family-main"
+                  >
+                    Модульные картины
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="bg-[#f9f9f9] py-[80px]">
+            <div
+              class="max-w-[1400px] mx-auto w-[90%] flex flex-col lg:flex-row items-start justify-between gap-[50px]"
+            >
+              <div class="w-full lg:w-1/2" data-aos="fade-right">
+                <h2
+                  class="text-[42px] font-bold text-[#000] mb-[30px] font-family-main"
+                >
+                  Как нас найти
+                </h2>
+                <p
+                  class="text-[18px] text-[#333] mb-[25px] font-[var(--font-family-main)]"
+                >
+                  Мы находимся в самом сердце города. Приходите к нам в офис,
+                  напишите или позвоните — будем рады помочь!
+                </p>
+                <ul class="space-y-[15px] text-left">
+                  <li class="flex items-center gap-[10px]">
+                    <i
+                      class="fa-solid fa-location-dot text-[var(--color-blue)] text-[22px]"
+                    ></i>
+                    <span class="text-[18px] text-[#000]"
+                      >г. Ташкент, ул. Амир Темур, 25</span
+                    >
+                  </li>
+                  <li class="flex items-center gap-[10px]">
+                    <i
+                      class="fa-solid fa-phone text-[var(--color-blue)] text-[22px]"
+                    ></i>
+                    <a
+                      href="tel:+998901234567"
+                      class="text-[18px] text-[var(--color-hyperlinks)] hover:underline"
+                    >
+                      +998 (90) 123-45-67
+                    </a>
+                  </li>
+                  <li class="flex items-center gap-[10px]">
+                    <i
+                      class="fa-solid fa-envelope text-[var(--color-blue)] text-[22px]"
+                    ></i>
+                    <a
+                      href="mailto:info@foxphoto.uz"
+                      class="text-[18px] text-[var(--color-hyperlinks)] hover:underline"
+                    >
+                      info@foxphoto.uz
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div
+                data-aos="fade-left"
+                class="w-full lg:w-1/2 h-[400px] rounded-[20px] overflow-hidden shadow-md"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.625530801297!2d69.27973767590756!3d41.31115847130886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef4e8a4b41491%3A0x9c0d3c4f5b1e5d04!2sTashkent!5e0!3m2!1sru!2s!4v1683912345678!5m2!1sru!2s"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </section>
+          <section class="bg-[#f9f9f9] py-20 sm:py-24 lg:py-32">
+            <div
+              class="max-w-[1400px] mx-auto w-[90%] flex flex-col gap-6 sm:gap-8"
+            >
+              <h1
+                class="text-base sm:text-lg md:text-xl leading-relaxed sm:leading-7 md:leading-8 text-black font-normal font-family-main"
+              >
+                Фотосалон Fox Photo Пермь предлагает широкий спектр услуг,
+                связанных с фотографией: фото на различные виды документов,
+                реставрация фотографии, печать фотографий на профессиональной
+                фотобумаге, печать фото на холсте, нанесение Ваших изображений
+                на кружки, футболки, магниты, брелоки и т.д.
+              </h1>
+              <div data-aos="fade-up" data-aos-delay="0">
+              <h2
+                class="text-xl sm:text-2xl md:text-3xl font-bold leading-snug sm:leading-normal text-black mt-5 font-family-main"
+              >
+                Напечатаем ваши фотографии
+              </h2>
+              <p
+                class="text-base sm:text-lg md:text-xl leading-relaxed sm:leading-7 md:leading-8 text-black font-normal font-family-main"
+              >
+                Если у Вас накопились фотографии с отпусков, праздников или
+                просто запомнившихся дней, мы предлагаем Вам не надеяться на
+                бесперебойную работу компьютера и распечатать любимые
+                фотографии, чтобы в случае поломки компьютерной техники не
+                остаться без приятных сердцу и глазу воспоминаний. Тем более,
+                что распечатать фото через интернет Пермь теперь можно, не
+                выходя из дома или офиса. Наш фотосалон предлагает Вам весьма
+                востребованную услугу среди наших клиентов – печать фото через
+                интернет Пермь. Для того, чтобы заказать фото через интернет
+                Пермь, нужно отправить Ваши фотографии нам на почту
+                fox-photo@mail.ru, после чего Вам остается лишь дождаться
+                готовности фотографий.
+              </p>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="100">
+              <h2
+                class="text-xl sm:text-2xl md:text-3xl font-bold leading-snug sm:leading-normal text-black mt-5 font-family-main"
+              >
+                Сделаем одежду уникальной
+              </h2>
+              <p
+                class="text-base sm:text-lg md:text-xl leading-relaxed sm:leading-7 md:leading-8 text-black font-normal font-family-main"
+              >
+                Мы активно развиваемся и продолжаем радовать наших клиентов
+                качественными и приятными глазу вещицами. Так, например, в
+                холодное время года у нас заказывают теплые толстовки и свитшоты
+                с надписями. Для жарких летних деньков подходят хлопковые
+                футболки и майки с любыми принтами.
+              </p>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="200">
+              <h2
+                class="text-xl sm:text-2xl md:text-3xl font-bold leading-snug sm:leading-normal text-black mt-5 font-family-main"
+              >
+                Оживим интерьер
+              </h2>
+              <p
+                class="text-base sm:text-lg md:text-xl leading-relaxed sm:leading-7 md:leading-8 text-black font-normal font-family-main"
+              >
+                Популярная услуга — печать фото на холсте — уже давно полюбилась
+                нашим заказчикам. Холсты очень органично вписываются в интерьер,
+                а разнообразие стилей оформления фотографии будет радовать самый
+                изысканный вкус.
+              </p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div
+              class="bg-[url('/images/bg.png')] bg-no-repeat bg-center bg-cover p-6 md:p-8 max-w-[1400px] w-full mx-auto"
+            >
+              <div class="flex flex-col md:flex-row gap-8">
+                <div class="flex-1" data-aos="fade-right">
+                  <h2 class="text-3xl font-bold text-white mb-4">
+                    Оставьте сообщение
+                  </h2>
+                  <form class="space-y-4">
+                    <input
+                      type="text"
+                      placeholder="Ваше имя"
+                      class="w-full p-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]"
+                    />
+                    <input
+                      type="tel"
+                      placeholder="Контактный телефон"
+                      class="w-full p-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]"
+                    />
+                    <textarea
+                      placeholder="Сообщение"
+                      rows="4"
+                      class="w-full p-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]"
+                    ></textarea>
+                    <button
+                      type="submit"
+                      class="w-full cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded transition-colors"
+                    >
+                      Отправить
+                    </button>
+                  </form>
+                </div>
+                <div class="flex-1 bg-white p-6 rounded-lg shadow-md" data-aos="fade-left">
+                  <h3
+                    class="text-2xl font-bold text-[var(--color-hyperlinks)] mb-4"
+                  >
+                    Контакты
+                  </h3>
+                  <div class="space-y-4 pl-10">
+                    <div class="flex items-start gap-3">
+                      <svg
+                        width="37"
+                        height="35"
+                        viewBox="0 0 37 35"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 flex-shrink-0 text-[var(--color-social)]"
+                      >
+                        <path
+                          d="M28.6771 34.0638C28.4771 34.0638 28.3771 34.0638 28.2771 34.0638C28.1771 34.0638 28.0771 34.0638 27.9771 33.9638C27.4771 33.8638 26.8771 33.7638 26.2771 33.5638C20.3771 31.2638 15.1771 28.1638 10.9771 24.3638C6.67709 20.4638 3.17709 15.7638 0.777088 10.2638C-0.222912 8.16383 -0.222912 6.06383 0.577088 4.26383C1.47709 2.46383 3.17709 1.06383 5.57709 0.263826C6.67709 -0.0361741 7.67709 -0.136174 8.67709 0.263826C10.9771 0.963826 15.7771 6.96383 15.9771 9.16383C16.1771 11.3638 14.3771 12.5638 13.5771 13.0638C12.7771 13.5638 12.5771 13.9638 13.1771 15.1638C14.6771 18.0638 17.1771 20.3638 20.6771 21.7638C21.0771 21.9638 21.3771 21.9638 21.5771 21.9638C21.7771 21.9638 22.0771 21.8638 22.2771 21.4638C23.6771 19.4638 25.3771 18.9638 26.4771 18.9638C27.6771 18.9638 28.8771 19.3638 30.1771 20.1638L30.7771 20.5638C31.6771 21.1638 32.6771 21.7638 33.5771 22.4638C33.7771 22.5638 33.8771 22.6638 34.0771 22.8638C35.3771 23.7638 37.6771 25.3638 36.5771 28.3638C35.3771 31.4638 31.7771 34.0638 28.6771 34.0638ZM7.17709 1.96383C6.87709 1.96383 6.47709 2.06383 6.17709 2.16383C4.37709 2.76383 2.97709 3.76383 2.37709 5.16383C1.77709 6.36383 1.87709 7.86383 2.57709 9.46383C4.97709 14.6638 8.17709 19.1638 12.3771 22.9638C16.3771 26.5638 21.3771 29.5638 27.0771 31.7638C27.4771 31.9638 27.9771 32.0638 28.3771 32.0638C28.5771 32.0638 28.6771 32.0638 28.6771 32.1638C30.9771 32.0638 33.8771 29.9638 34.6771 27.7638C35.1771 26.2638 34.4771 25.6638 32.9771 24.5638C32.7771 24.4638 32.5771 24.2638 32.4771 24.1638C31.5771 23.5638 30.6771 22.9638 29.7771 22.3638L29.1771 21.9638C28.1771 21.3638 27.2771 20.9638 26.5771 21.0638C25.5771 21.0638 24.7771 21.6638 23.9771 22.6638C23.2771 23.7638 22.2771 23.9638 21.5771 23.9638C21.0771 23.9638 20.4771 23.8638 19.8771 23.5638C15.8771 21.9638 12.9771 19.3638 11.3771 15.9638C10.3771 13.9638 10.7771 12.4638 12.4771 11.2638C13.2771 10.7638 14.0771 10.1638 13.9771 9.16383C13.8771 7.66383 9.57709 2.36383 8.07709 1.96383C7.77709 1.96383 7.47709 1.96383 7.17709 1.96383Z"
+                          fill="#333333"
+                        />
+                      </svg>
+                      <span class="text-gray-800 hover:underline cursor-pointer"
+                        >+998 (90) 123-45-67</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <svg
+                        width="35"
+                        height="24"
+                        viewBox="0 0 35 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 flex-shrink-0 text-[var(--color-social)]"
+                      >
+                        <path
+                          d="M31 0H3.3C1.5 0 0 1.5 0 3.3V20.7C0 22.5 1.5 24 3.3 24H31C32.8 24 34.3 22.5 34.3 20.7V3.3C34.3 1.5 32.8 0 31 0ZM31 1.9L18.2 14.6C17.9 14.9 17.5 15 17.1 15C16.7 15 16.3 14.9 16 14.6L3.2 1.9H31ZM1.9 20.9V3.2L11.3 12.5L1.9 20.9ZM3.3 22.1L12.6 13.7L14.8 15.8C16.1 17.1 18.2 17.1 19.5 15.8L21.7 13.6L31 22H3.3V22.1ZM32.4 20.9L23 12.4L32.4 3.1V20.9Z"
+                          fill="#3E6E96"
+                        />
+                      </svg>
+                      <span class="text-gray-800 hover:underline cursor-pointer"
+                        >info@foxphoto.uz</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <svg
+                        width="41"
+                        height="41"
+                        viewBox="0 0 41 41"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 flex-shrink-0 text-[var(--color-kommetarii)]"
+                      >
+                        <path
+                          d="M20.4 40.7C16.6 40.7 12.9 39.7 9.7 37.7L2.9 39.8C2.6 39.9 2.2 39.8 1.9 39.6C1.6 39.3 1.5 39 1.6 38.6C2.4 35.8 3.2 32.6 3.4 31.7C1.2 28.3 0 24.4 0 20.4C0 9.1 9.1 0 20.4 0C31.7 0 40.8 9.1 40.8 20.4C40.8 31.7 31.6 40.7 20.4 40.7ZM9.8 35.6C10 35.6 10.2 35.7 10.3 35.8C13.3 37.7 16.7 38.8 20.3 38.8C30.4 38.8 38.7 30.6 38.7 20.4C38.7 10.2 30.5 2 20.4 2C10.2 2 2 10.2 2 20.4C2 24.1 3.1 27.7 5.2 30.8C5.2 30.8 5.2 30.8 5.2 30.9C5.2 31 5.3 31.1 5.3 31.2C5.3 31.3 5.3 31.4 5.3 31.5C5.3 32.2 5 33.7 4 37.4L9.5 35.7C9.6 35.6 9.7 35.6 9.8 35.6Z"
+                          fill="#370475"
+                        />
+                        <path
+                          d="M27.1 19.4C27.1 16.6 24.5 14.1 21.3 13.8C21.2 13.8 21.2 13.8 21.1 13.8C20.9 13.8 20.8 13.8 20.6 13.8C20 13.8 19.8 14.2 19.7 14.5C19.7 14.7 19.7 15 19.8 15.1C20 15.4 20.4 15.4 20.7 15.4C20.8 15.4 20.9 15.4 20.9 15.4C23.8 16 24.7 16.9 25.2 19.5C25.2 19.6 25.2 19.6 25.2 19.7C25.2 20 25.3 20.7 26 20.7C26.1 20.7 26.1 20.7 26.2 20.7C26.9 20.6 26.9 20 26.9 19.7C27.1 19.6 27.1 19.5 27.1 19.4C27.1 19.5 27.1 19.4 27.1 19.4Z"
+                          fill="#370475"
+                        />
+                        <path
+                          d="M20.4 12.8C20.5 12.8 20.6 12.8 20.6 12.8C25.3 13.4 27.5 15.4 28.1 19.8C28.1 19.9 28.1 20 28.1 20.1C28.1 20.4 28.1 21.2 29 21.2C29.3 21.2 29.5 21.1 29.6 21C29.9 20.7 29.8 20.4 29.8 20.1C29.8 20 29.8 20 29.8 19.9C29.8 15.4 25.6 11.4 20.8 11.3C20.8 11.3 20.8 11.3 20.7 11.3C20.7 11.3 20.7 11.3 20.6 11.3C20.6 11.3 20.5 11.3 20.4 11.3C20.3 11.3 20.2 11.3 20.2 11.3C19.4 11.3 19.3 11.8 19.3 12.1C19.4 12.7 20.1 12.8 20.4 12.8Z"
+                          fill="#370475"
+                        />
+                        <path
+                          d="M28 25.5C27.9 25.4 27.8 25.4 27.7 25.3C27.2 24.9 26.6 24.6 26.1 24.2C26 24.1 25.9 24.1 25.8 24C25.1 23.6 24.5 23.4 23.9 23.4C23.1 23.4 22.5 23.8 21.9 24.6C21.7 25 21.4 25.1 21 25.1C20.8 25.1 20.5 25 20.3 24.9C18.1 24 16.5 22.6 15.6 20.8C15.2 19.9 15.3 19.3 16 18.8C16.4 18.5 17.2 18 17.1 17C17 15.9 14.4 12.6 13.3 12.3C12.8 12.1 12.3 12.2 11.9 12.3C10.6 12.7 9.8 13.4 9.3 14.3C8.9 15.2 8.9 16.2 9.4 17.3C10.8 20.4 12.8 23.1 15.2 25.3C17.6 27.5 20.5 29.2 23.9 30.5C24.2 30.6 24.5 30.7 24.8 30.7C24.9 30.7 24.9 30.7 25 30.7H25.1C26.7 30.7 28.6 29.3 29.1 27.7C29.7 26.7 28.8 26 28 25.5Z"
+                          fill="#370475"
+                        />
+                        <path
+                          d="M21.2 16.3C20.9 16.3 20.4 16.3 20.2 16.9C20.1 17.2 20.1 17.4 20.2 17.5C20.4 17.8 20.7 17.8 21 17.9C22.1 18 22.6 18.6 22.7 19.6C22.8 20.1 23.1 20.4 23.5 20.4H23.6C24.1 20.3 24.4 20 24.3 19.3C24.3 18.6 23.9 17.8 23.2 17.2C22.7 16.6 21.9 16.3 21.2 16.3Z"
+                          fill="#370475"
+                        />
+                      </svg>
+                      <span class="text-gray-800 hover:underline cursor-pointer"
+                        >+998 (90) 123-45-67</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <svg
+                        width="31"
+                        height="45"
+                        viewBox="0 0 31 45"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 flex-shrink-0 text-[var(--color-hyperlinks)]"
+                      >
+                        <path
+                          d="M15.5 44.2C14.9 44.2 14.2 43.9 13.8 43.3L13.7 43C9.6 37.1 0 22.4 0 15.5C0 7 7 0 15.5 0C24 0 31 7 31 15.5C31 23.5 18.2 41.6 17.2 43.1C16.9 43.7 16.1 44.2 15.5 44.2ZM15.5 2C8.1 2 2 8.1 2 15.5C2 19.9 7 29.8 15.3 41.9L15.5 42.1L15.6 42C16.7 40.6 29 22.6 29 15.5C29 8.1 23 2 15.5 2ZM15.5 22.2C11.4 22.2 8 18.8 8 14.7C8 10.6 11.4 7.2 15.5 7.2C19.6 7.2 23 10.6 23 14.7C23 18.8 19.6 22.2 15.5 22.2ZM15.5 9.2C12.5 9.2 10 11.7 10 14.7C10 17.7 12.5 20.2 15.5 20.2C18.5 20.2 21 17.7 21 14.7C21 11.7 18.5 9.2 15.5 9.2Z"
+                          fill="#E37C1D"
+                        />
+                      </svg>
+                      <span class="text-gray-800 hover:underline cursor-pointer"
+                        >г. Ташкент, ул. Амир Темур, 25</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex gap-4 mt-6 pl-10">
+                    <a
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-block transform transition-transform duration-300 hover:scale-110"
+                    >
+                      <img
+                        src="./images/insta.png"
+                        alt="Instagram"
+                        class="w-8 h-8"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="bg-gray-100 py-8 px-6">
+          <div
+           class="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <div class="flex items-center gap-2">
+              <a href="./index.html">
+                <img src="./images/logo_footer.png" alt="" />
+              </a>
+            </div>
+            <div class="text-sm text-gray-600 text-center md:text-left">
+              © FoxPhoto, 2018. Все права защищены
+            </div>
+            <div
+              class="flex flex-wrap justify-center md:justify-start gap-6 text-sm"
+            >
+              <a href="#" class="text-[var(--color-hyperlinks)] hover:underline"
+                >Виды печати</a
+              >
+              <a href="#" class="text-[var(--color-hyperlinks)] hover:underline"
+                >Наши работы</a
+              >
+              <a href="#" class="text-[var(--color-hyperlinks)] hover:underline"
+                >Цены</a
+              >
+              <a href="#" class="text-[var(--color-hyperlinks)] hover:underline"
+                >Контакты</a
+              >
+            </div>
+          </div>
+        </footer>
+      </body>
+    </html>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease",
+        once: true, // анимация сработает только один раз при прокрутке
+      });
+    </script>
+  </body>
 </html>

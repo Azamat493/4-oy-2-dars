@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-social: #3e6e96;
+  --color-social-hovered: #2d7fa3;
+  --color-hyperlinks: #00636d;
+  --color-form-red: #ff0000;
+  --color-kommetarii: #370475;
+  --color-blue: #00afcc;
+  --font-family-main: "Open Sans", sans-serif;
+  --font-family-secondary: "Segoe Script", sans-serif;
+}
